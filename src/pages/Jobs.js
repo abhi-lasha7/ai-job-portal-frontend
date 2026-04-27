@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { jobsAPI, applicationAPI } from '../services/api';
+import { jobsAPI } from '../services/api';
 import { useNavigate } from 'react-router-dom';
 
 export default function Jobs() {
