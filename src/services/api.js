@@ -1,10 +1,11 @@
 import axios from 'axios';
 
+const BASE_URL = 'https://ai-job-portal-backend-production.up.railway.app/api';
+
 const API = axios.create({
-  baseURL: 'http://localhost:8081/api'
+  baseURL: BASE_URL
 });
 
-// Add token to every request automatically
 API.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
   if (token) {
