@@ -12,6 +12,7 @@ import Dashboard from './pages/Dashboard';
 import JobDetail from './pages/JobDetail';
 import PostJob from './pages/PostJob';
 import Applicants from './pages/Applicants';
+import MyApplications from './pages/MyApplications';
 
 function App() {
   const token = localStorage.getItem('token');
@@ -40,6 +41,9 @@ function App() {
           <Navigate to={token ? "/dashboard" : "/login"} />
         } />
       </Routes>
+      <Route path="/my-applications" element={
+  token ? <MyApplications /> : <Navigate to="/login" />
+} />
     </Router>
   );
 }

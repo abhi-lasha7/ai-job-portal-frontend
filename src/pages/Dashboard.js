@@ -183,6 +183,14 @@ export default function Dashboard() {
     + Post Job
   </button>
 )}
+
+{role === 'JOB_SEEKER' && (
+  <button
+    style={styles.myAppsBtn}
+    onClick={() => navigate('/my-applications')}>
+    📋 My Applications
+  </button>
+)}
                   </div>
                 </div>
               ))}
@@ -308,6 +316,15 @@ const styles = {
     cursor: 'pointer',
     fontWeight: 'bold'
   },
+  myAppsBtn: {
+  padding: '8px 20px',
+  background: '#a29bfe',
+  color: 'white',
+  border: 'none',
+  borderRadius: '8px',
+  cursor: 'pointer',
+  fontWeight: 'bold'
+},
   logoutBtn: {
     padding: '8px 20px',
     background: '#ff6b6b',
