@@ -1,4 +1,5 @@
 import React from 'react';
+import JobDetail from './pages/JobDetail';
 import {
   BrowserRouter as Router,
   Routes,
@@ -28,6 +29,10 @@ function App() {
           <Navigate to={token ? "/dashboard" : "/login"} />
         } />
       </Routes>
+
+      <Route path="/jobs/:id" element={
+        token ? <JobDetail /> : <Navigate to="/login" />
+      } />
     </Router>
   );
 }
