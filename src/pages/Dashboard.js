@@ -163,12 +163,26 @@ export default function Dashboard() {
                       👁️ {job.viewCount} views
                     </span>
                     {role === 'JOB_SEEKER' && (
-                      <button
-                        style={styles.applyBtn}
-                        onClick={() => navigate(`/apply/${job.id}`)}>
-                        Apply Now →
-                      </button>
-                    )}
+              <button
+                style={styles.applyBtn}
+                 onClick={() => navigate(`/jobs/${job.id}`)}>
+                 Apply Now →
+              </button>
+  )}
+  {role === 'EMPLOYER' && (
+  <button
+    style={styles.applyBtn}
+    onClick={() => navigate(`/applicants/${job.id}`)}>
+    View Applicants →
+  </button>
+)}
+{role === 'EMPLOYER' && (
+  <button
+    style={styles.postJobBtn}
+    onClick={() => navigate('/post-job')}>
+    + Post Job
+  </button>
+)}
                   </div>
                 </div>
               ))}
@@ -431,6 +445,16 @@ const styles = {
     fontSize: '13px',
     fontWeight: 'bold'
   },
+
+  postJobBtn: {
+  padding: '8px 20px',
+  background: '#00b894',
+  color: 'white',
+  border: 'none',
+  borderRadius: '8px',
+  cursor: 'pointer',
+  fontWeight: 'bold'
+}, 
   statusBadge: {
     padding: '4px 12px',
     borderRadius: '20px',
