@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://ai-job-portal-backend-production.up.railway.app/api';
+const API_BASE_URL = "https://ai-job-portal-backend-jvvl.onrender.com";
 
 const API = axios.create({
   baseURL: BASE_URL
