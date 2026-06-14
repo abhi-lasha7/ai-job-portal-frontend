@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-const API_BASE_URL = "https://ai-job-portal-backend-jvvl.onrender.com";
-
 const API = axios.create({
-  baseURL: API_BASE_URL
+  baseURL: "https://ai-job-portal-backend-jvvl.onrender.com"
 });
 
 API.interceptors.request.use((config) => {
